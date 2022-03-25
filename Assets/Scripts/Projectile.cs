@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float speed = 10f;
+    public void SetSpeed(float newspeed)
     {
-        
+        speed = newspeed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
+
 }
